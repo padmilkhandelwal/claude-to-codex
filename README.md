@@ -2,13 +2,13 @@
 
 > Convert any Claude skill into a ready-to-use Codex skill — automatically.
 > Search by name, fetch, transform, validate, and install in one command.
+> Use Claude skills in your Codex workflows
 
 ---
 
 ## Why this exists
 
-Claude and Codex skills share the same folder + Markdown structure, but differ
-in ways that silently break compatibility:
+Claude and Codex skills share a similar structure, but small differences in tool naming and configuration can break compatibility. This tool automates the entire migration so you can run your favorite Claude skills directly within the Codex CLI.
 
 | | Claude Code | Codex CLI |
 |---|---|---|
@@ -29,6 +29,16 @@ with an independent tester agent, and writes the result directly to
 ---
 
 ## How it works
+
+How it works
+Search: Finds the skill in the marketplace.
+
+Transform: Maps Claude tools to Codex equivalents line-by-line.
+
+Generate: Creates the required agents/openai.yaml metadata.
+
+Install: Writes the final version to your .codex/skills/ directory.
+
 
 ```mermaid
 flowchart LR
@@ -54,7 +64,7 @@ write → report.
 
 ---
 
-## Quick start
+## How to Install and Convert Your First Skill 
 
 ```bash
 # 1. Clone and install globally
